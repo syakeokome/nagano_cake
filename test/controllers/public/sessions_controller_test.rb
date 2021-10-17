@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class Public::SessionsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get new" do
+    get public_sessions_new_url
+    assert_response :success
+  end
+
 end
