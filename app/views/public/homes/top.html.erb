@@ -5,7 +5,11 @@
 
   <h1>新着商品</h1>
     <% @items.each do |item|%>
-        <div><%= attachment_image_tag item, :image, :fill, 60, 60 %></div>
+        <div>
+          <%= link_to public_item_path(item) do %>
+           <%= attachment_image_tag item, :image, :fill, 60, 60 %>
+          <% end %>
+        </div>
         <div><%= item.name %></div>
         <div><%= item.prise %></div>
     <% end %>
