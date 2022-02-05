@@ -6,7 +6,9 @@
   <table class="table table-hover table-inverse">
    <tr>
      <th>名前</th>
-     <td>(姓)<%= f.text_field :last_name %>　（名）<%= f.text_field :first_name %></td>
+     <td>
+      (あ)<%= f.text_field :last_name, value: "令和" %>
+     （名）<%= f.text_field :first_name %></td>
     </tr>
     <tr>
      <th>フリガナ</th>
