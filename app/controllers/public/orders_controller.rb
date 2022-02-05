@@ -1,5 +1,6 @@
 class Public::OrdersController < ApplicationController
   def new
+    @order = Order.new
   end
 
   def complete
@@ -9,5 +10,9 @@ class Public::OrdersController < ApplicationController
   end
 
   def show
+  end
+  
+  def confirm
+    
   end
 end
