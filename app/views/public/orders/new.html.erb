@@ -1,11 +1,11 @@
 <h3>注文情報入力</h3>
 
-<%= form_with model: @order, url: public_orders_comfirm_path, local: true do |f| %>
+<%= form_with model: @order, url: public_orders_confirm_path, local: true do |f| %>
   <p>支払方法</p>
-  <%= f.radio_button :payment_method, "credit_card" %>
+  <%= f.collection_radio_button :payment_method, 0 %>
   <%= f.label :payment_method_credit_card, "クレジットカード" %>
 
-  <%= f.radio_button :payment_method, "transfer" %>
+  <%= f.radio_button :payment_method, 1 %>
   <%= f.label :payment_method_transfer, "銀行振込" %>
 
   <p>お届け先</p>
@@ -25,18 +25,18 @@
    <tr>
      <th>郵便番号(ハイフンなし)</th>
      <td>
-      <%= f.text_field :postal_code, placeholder:"0000000" %>
+      <%= f.text_field :new_postal_code, placeholder:"0000000" %>
      </td>
     </tr>
     <tr>
      <th>住所</th>
      <td>
-      <%= f.text_field :address, placeholder:"東京都渋谷区代々木神園町0-0" %>
+      <%= f.text_field :new_address, placeholder:"東京都渋谷区代々木神園町0-0" %>
      </td>
     </tr>
     <tr>
      <th>宛名</th>
-     <td><%= f.text_field :name, placeholder:"令和　道子" %></td>
+     <td><%= f.text_field :new_name, placeholder:"令和　道子" %></td>
     </tr>
   </table>
 

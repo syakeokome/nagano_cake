@@ -21,7 +21,7 @@ root to: 'public/homes#top'
   end
   namespace :public do
     get 'orders/complete'
-    post 'orders/comfirm'
+    post 'orders/confirm'
     resources :orders, only: [:new, :create, :index, :show]
   end
   namespace :public do
