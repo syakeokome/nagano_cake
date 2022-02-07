@@ -12,7 +12,7 @@
 
   <%= radio_button_tag :order_address, 1 %>
   <%= label_tag :order_address_1, "登録済み住所から選択" %></br>
-  <%= f.collection_select :address, current_customer.addresses, :id, :get_full_address %></br>
+  <%= f.collection_select :registard_address, current_customer.addresses, :id, :get_full_address %></br>
 
   <%= radio_button_tag :order_address, 2 %>
   <%= label_tag :order_address_2, "新しいお届け先" %>
@@ -20,18 +20,18 @@
    <tr>
      <th>郵便番号(ハイフンなし)</th>
      <td>
-      <%= f.text_field :new_postal_code, placeholder:"0000000" %>
+      <%= f.text_field :postal_code, placeholder:"0000000" %>
      </td>
     </tr>
     <tr>
      <th>住所</th>
      <td>
-      <%= f.text_field :new_address, placeholder:"東京都渋谷区代々木神園町0-0" %>
+      <%= f.text_field :address, placeholder:"東京都渋谷区代々木神園町0-0" %>
      </td>
     </tr>
     <tr>
      <th>宛名</th>
-     <td><%= f.text_field :new_name, placeholder:"令和　道子" %></td>
+     <td><%= f.text_field :name, placeholder:"令和　道子" %></td>
     </tr>
   </table>
 
