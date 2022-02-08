@@ -26,7 +26,7 @@
           <% end %>
         </td>
         <td>
-          <% order.total_payment %>
+          <% order.total_payment + order.shipping_cost %>
         </td>
         <td>
          <%= link_to "表示する", public_order_path(order) %>
