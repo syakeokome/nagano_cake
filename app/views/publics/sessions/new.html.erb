@@ -3,7 +3,7 @@
 <%= form_with model: @customer, url: customer_session_path, local: true do |f| %>
   <%= render "publics/shared/error_messages", resource: resource %>
 
-  <table class="table table-hover table-inverse">
+  <table class="table table-inverse">
    <h3>会員の方はこちらからログイン</h3>
     <tr>
      <th>メールアドレス</th>
@@ -15,7 +15,7 @@
     </tr>
     <tr>
       <th></th>
-      <td><%= f.submit 'ログイン' %></td>
+      <td><%= f.submit 'ログイン', class:"btn btn-primary" %></td>
     </tr>
   </table>
 <% end %>

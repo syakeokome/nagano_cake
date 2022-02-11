@@ -10,7 +10,7 @@
   <h1>新着商品</h1>
   <div class="wrap">
     <% @items.each do |item|%>
-        <div class="bo">
+        <div class="box">
           <%= link_to public_item_path(item) do %>
            <%= attachment_image_tag item, :image, :fill, 60, 60 %><br>
           <% end %>

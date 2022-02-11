@@ -1,3 +1,11 @@
 // Place all the styles related to the public/cart_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  border-collapse: collapse;
+  border: solid 1px #888;
+}
+th, td , tr{
+  padding: 5px 15px; /* 上下 左右 */
+  border: solid 1px #888;
+}
