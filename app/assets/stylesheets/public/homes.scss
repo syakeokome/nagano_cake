@@ -1,3 +1,29 @@
 // Place all the styles related to the public/homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.bgimage {
+    background-image: url(https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/rainbow_cake_20402_16x9.jpg);
+    text-align: center;
+    background-repeat:  no-repeat;
+    width:auto;
+    height:800pX;
+}
+
+.bg_image-text {
+    border:  solid 1px;
+    text-align: center;
+    display:  inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: block;
+}
