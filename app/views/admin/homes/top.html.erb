@@ -1,4 +1,4 @@
-<table class="table table-hover table-inverse">
+<table class="table table-inverse">
   <h1>注文履歴一覧</h1>
   <thead>
    <tr>
@@ -11,13 +11,19 @@
     <% @orders.each do |order|%>
       <tr>
         <td>
-          <%= order.created_at %>
+          <%= link_to admin_order_path(order) do %>
+            <%= order.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
+          <% end %>
         </td>
         <td>
-          <%= order.customer.last_name %><%= order.customer.first_name %>
+          <%= order.name %>
         </td>
+        <% sum = 0 %>
+        <% order.order_details.each do |order_detail|%>
+          <% sum += order_detail.amount %>
+        <% end %>
         <td>
-          <%= order.order_detail.amount %>
+          <%= sum %>
         </td>
       </tr>
     <% end %>

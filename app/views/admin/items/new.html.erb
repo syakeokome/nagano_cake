@@ -1,4 +1,4 @@
-<h1>画像投稿フォーム</h1>
+<h1>商品新規登録</h1>
 <%= form_with model:@item, url: admin_items_path, local:true do |f| %>
   <h4>商品画像</h4>
   <%= f.attachment_field :image %>
@@ -8,5 +8,5 @@
   <%= f.text_area :introduction %>
   <h4>税抜価格</h4>
   <%= f.text_field :prise %>円
-  <%= f.submit '新規登録' %>
+  <%= f.submit '新規登録', class:"btn btn-success" %>
 <% end %>
