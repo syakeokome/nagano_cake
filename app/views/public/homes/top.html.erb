@@ -1,4 +1,4 @@
-<div class="bgimage">
+<div class="bgimage p-5">
    <div class="bg_image-text">
      <h4>ようこそ、ながのCAKEへ！</h4>
      <p>このサイトは、ケーキ販売のECサイトになります。</p>
@@ -10,6 +10,7 @@
   <h1>新着商品</h1>
   <div class="wrap">
     <% @items.each do |item|%>
+      <div>
         <div class="box">
           <%= link_to public_item_path(item) do %>
            <%= attachment_image_tag item, :image, :fill, 60, 60 %><br>
@@ -17,6 +18,7 @@
         </div>
         <div><%= item.name %></div><br>
         <div><%= item.prise %></div>
+      </div>
     <% end %>
   </div>
   <%= link_to "全ての商品を見る",public_items_path %>
