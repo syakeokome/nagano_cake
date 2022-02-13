@@ -15,7 +15,6 @@ root to: 'public/homes#top'
     resources :items, only: [:index, :new, :create, :show, :edit, :update]
     get 'homes/top'
     resources :order_details, only: [:update]
-    root to: 'homes#top'
   end
   namespace :public do
     resources :addresses, only: [:index, :edit, :create,:update,:destroy]
