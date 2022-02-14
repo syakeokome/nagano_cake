@@ -31,7 +31,7 @@ root to: 'public/homes#top'
   namespace :public do
     get 'customers/unsubscribe'
     patch 'customers/withdraw'
-    resources :customers, only: [:show, :edit, :update]
+    resource :customers, only: [:show, :edit, :update]
   end
   namespace :public do
     resources :items, only: [:index, :show]

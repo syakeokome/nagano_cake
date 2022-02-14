@@ -39,7 +39,7 @@
                 </li>
              <% elsif customer_signed_in? %>
                 <li>
-                 <%= link_to "マイページ", public_customer_path(current_customer), class:"fas fa-home nav-link text-light"  %>
+                 <%= link_to "マイページ", public_customers_path, class:"fas fa-home nav-link text-light"  %>
                 </li>
                 <li>
                  <%= link_to "商品一覧",public_items_path, class:"fas fa-users nav-link text-light" %>
