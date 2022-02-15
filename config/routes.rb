@@ -9,11 +9,11 @@ root to: 'public/homes#top'
   }
 
   namespace :admin do
+    get 'homes/top'
     resources :orders, only: [:show, :update]
     resources :customers, only: [:index, :show, :edit, :update]
     resources :genres, only: [:index, :create, :edit, :update]
     resources :items, only: [:index, :new, :create, :show, :edit, :update]
-    get 'homes/top'
     resources :order_details, only: [:update]
   end
   namespace :public do
@@ -40,7 +40,7 @@ root to: 'public/homes#top'
     get 'homes/top'
     get 'homes/about'
   end
-
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
