@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
 
-  before_action :authenticate_customer!, except: [:top, :about]
+  before_action :authenticate_customer!, except: [:top, :about],if: :use_auth?
+
+  before_action :authenticate_admin!, except: [:top, :about],if: :use_auth?
+
   #before_action :configure_permitted_parameters, if: :devise_controller?
 
 
@@ -8,7 +11,7 @@ class ApplicationController < ActionController::Base
     if resource_or_scope == :admin
       new_admin_session_path
     else
-      new_customer_session_path
+      root_path
     end
   end
 
@@ -20,6 +23,14 @@ class ApplicationController < ActionController::Base
       root_path
     end
 
+  end
+
+  private
+
+  def use_auth?
+    unless controller_name == 'items' && action_name == 'index'
+      true
+    end
   end
 
 end
