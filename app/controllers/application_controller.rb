@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
 
-  before_action :authenticate_customer!, except: [:top, :about],if: :use_auth?
+  #before_action :authenticate_customer!, except: [:top, :about],if: :use_auth?
 
-  before_action :authenticate_admin!, except: [:top, :about],if: :use_auth?
+  #before_action :authenticate_admin!, except: [:top, :about],if: :use_auth?
 
   #before_action :configure_permitted_parameters, if: :devise_controller?
 
